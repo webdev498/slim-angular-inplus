@@ -1,0 +1,55 @@
+<div ng-controller="profile2Ctrl" class="profile2_page">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-10">
+            <h2>Profile 2</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a>App views</a>
+                </li>
+                <li class="active">
+                    <strong>Profile 2</strong>
+                </li>
+            </ol>
+        </div>
+        <div class="col-lg-2">
+
+        </div>
+    </div>
+    <div class="wrapper wrapper-content animated fadeInRight">
+
+        <div class="row m-b-lg m-t-lg">     
+            <h1>Information</h1>
+            <div>Phone</div>
+            <input type="text" ng-model="user.phoneNumber">
+            <br><br>
+            <div>Company</div>
+            <input type="text" ng-model="user.company">
+            <br><br>
+            <div>My Favourite Color</div>
+            <input type="text" ng-model="user.color">
+        </div>
+        <button type="submit" class="btn btn-primary block m-b" ng-click="update(user)">Update</button>
+        <div class="row">
+            <h1>Session / User Object Data</h1>
+            <div>UID</div>
+            <input type="text" ng-model="user.uid" disabled>
+            <br><br>
+            <div>Email</div>
+            <input type="text" ng-model="user.email">
+            <button ng-click="updateEmail(user)">Update</button>
+            <br><br>
+            <div>Password</div>
+            <input type="password" ng-model="user.newPassword" placeholder="Enter New Password if you want">
+            <button ng-click="updatePassword(user)">Update</button>
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+    .profile2_page input{
+        width: 50%;
+    }
+</style>
